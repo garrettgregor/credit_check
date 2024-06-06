@@ -1,9 +1,9 @@
-require './lib/credit_check'
+require "./lib/credit_check"
 
 describe CreditCheck do
-  VALID = %w[5541808923795240 4024007136512380 6011797668867828]
+  VALID = %w[5541808923795240 4024007136512380 6011797668867828].freeze
   LIMIT = 1500
-  INVALID = %w[5541801923795240 4024007106512380 6011797668868728]
+  INVALID = %w[5541801923795240 4024007106512380 6011797668868728].freeze
 
   describe "valid credit cards" do
     it "checks to see if a credit card is valid" do

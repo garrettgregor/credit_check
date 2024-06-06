@@ -9,8 +9,8 @@ class CreditCheck
   def double_every_other(card_number)
     every_other_doubled = []
 
-    card_number.to_i.digits.reverse.each_with_index do |num,index|
-      index.even? ? every_other_doubled << num * 2 : every_other_doubled << num
+    card_number.to_i.digits.reverse.each_with_index do |num, index|
+      every_other_doubled << (index.even? ? num * 2 : num)
     end
 
     every_other_doubled
@@ -20,7 +20,6 @@ class CreditCheck
     summed_digits = []
 
     arr_of_digits.each do |num|
-
       if num >= 10
         counter = 0
         while num >= 10

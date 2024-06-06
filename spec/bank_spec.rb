@@ -1,6 +1,6 @@
-require 'rspec'
-require './lib/bank'
-require './lib/credit_check'
+require "rspec"
+require "./lib/bank"
+require "./lib/credit_check"
 
 RSpec.configure do |config|
   config.formatter = :documentation
@@ -12,7 +12,7 @@ RSpec.describe Bank do
     expect(bank).to be_a Bank
   end
 
-  it "has a name" do 
+  it "has a name" do
     bank = Bank.new("Wells Fargo")
     expect(bank.name).to eq "Wells Fargo"
   end
